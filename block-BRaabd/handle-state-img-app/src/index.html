@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>React State - Image App</title>
+  </head>
+  <body>
+    <div class="root"></div>
+    <!-- React and ReactDOM CDN scripts -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Babel script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root = document.querySelector('.root');
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            img: 0,
+          };
+        }
+        render() {
+          return (
+            <center>
+              <h1>Handling State</h1>
+              <button>Basketball</button>
+              <button>PubG</button>
+              <button>Tiger</button>
+              <button>Phone</button>
+              <button>Laptop</button>
+              <button>Cricket</button>
+
+              <img src="../assets/basketball.jpg" alt="basketball" />
+            </center>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>
