@@ -4,57 +4,69 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0,
+      count: 0,
+      step: 5,
+      max: 15,
     };
   }
   handleIncrement = () => {
+    let { count, step, max } = this.state;
     this.setState({
-      counter: this.state.counter + 1,
+      count: count + step > max ? count : count + step, // i.e  if 15 is the max set, and if count + step is excceding 15 then return 15 only, else return the sum (which will be lower than 15)
     });
   };
   handleDecrement = () => {
     this.setState({
-      counter: this.state.counter - 1,
+      count: this.state.count - this.state.step,
     });
   };
   handleReset = () => {
     this.setState({
-      counter: 0,
+      count: 0,
     });
   };
+
   render() {
     return (
       <center>
-        <h1>{this.state.counter}</h1>
+        <h1>{this.state.count}</h1>
 
         <div className="options-wrapper flex">
           <div>
             <h3>Steps</h3>
             <ul className="options flex">
-              <li>
-                <button>5</button>
-              </li>
-              <li>
-                <button>10</button>
-              </li>
-              <li>
-                <button>15</button>
-              </li>
+              {[5, 10, 15].map((step) => (
+                <li key={step}>
+                  <button
+                    key={step}
+                    onClick={() => {
+                      this.setState({ step: step });
+                    }}
+                    className={this.state.step === step ? 'active--button' : ''}
+                  >
+                    {step}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3>Max Value</h3>
             <ul className="options flex">
-              <li>
-                <button>12</button>
-              </li>
-              <li>
-                <button>100</button>
-              </li>
-              <li>
-                <button>200</button>
-              </li>
+              {[15, 100, 200].map((max) => (
+                <li key={max}>
+                  <button
+                    key={max}
+                    onClick={() => {
+                      this.setState({ max: max });
+                    }}
+                    className={this.state.max === max ? 'active--button' : ''}
+                  >
+                    {max}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
