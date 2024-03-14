@@ -166,3 +166,7 @@ h3 {
   border: 1px solid black;
   margin: 0 1rem;
 }
+ul.options button.active--button {
+  background-color: red;
+  color: white;
+}
