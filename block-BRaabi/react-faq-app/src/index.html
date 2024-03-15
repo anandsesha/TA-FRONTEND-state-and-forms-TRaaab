@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>React State - Image App</title>
+  </head>
+  <body>
+    <div class="root">
+      <center>
+        <h1>React State - FAQ page</h1>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h5>Question 1</h5>
+            <button>⬇️</button>
+          </div>
+          <div class="faq-answer">Answer 1</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h5>Question 2</h5>
+            <button>⬇️</button>
+          </div>
+          <div class="faq-answer">Answer 2</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h5>Question 3</h5>
+            <button>⬇️</button>
+          </div>
+          <div class="faq-answer">Answer 3</div>
+        </div>
+      </center>
+    </div>
+    <!-- React and ReactDOM CDN scripts -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Babel script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script type="text/babel">
+      const root = document.querySelector('.root');
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            counter: 0,
+          };
+        }
+        render() {
+          return;
+        }
+      }
+
+      ReactDOM.render(<App />, root);
+    </script> -->
+  </body>
+</html>
