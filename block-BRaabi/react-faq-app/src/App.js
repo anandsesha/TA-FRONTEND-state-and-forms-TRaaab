@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import Data from './data.json';
+import Answer from './Answer';
+class App extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props);
+    this.state = {
+      window: 'closed',
+    };
+  }
+  toggleWindow = () => {
+    this.setState({
+      window: this.state.window === 'closed' ? 'open' : 'closed',
+    });
+  };
+  render() {
+    return (
+      <center>
+        <h1>React State - FAQ page</h1>
+        {Data.map((obj, i) => (
+          <div key={obj.Q} className="faq-item">
+            <div className="faq-question">
+              <h5>{obj.Q}</h5>
+              <button onClick={this.toggleWindow}>⬇️</button>
+            </div>
+            <>
+              <Answer currentState={this.state.window} index={i} />
+            </>
+          </div>
+        ))}
+      </center>
+    );
+  }
 }
 
 export default App;
