@@ -1,17 +1,17 @@
-function Answer(props) {
-  console.log(props.currentState, props.index);
+// function Answer(props) {
+//   console.log(props);
 
-  return (
-    <div
-      className={
-        props.currentState === 'open'
-          ? 'answer--open'
-          : 'faq-answer answer--closed'
-      }
-    >
-      {props.index}
-    </div>
-  );
-}
+//   return (
+//     <div
+//     //   className={
+//     //     props.currentState === 'open'
+//     //       ? 'answer--open'
+//     //       : 'faq-answer answer--closed'
+//     //   }
+//     >
+//       {props.obj}
+//     </div>
+//   );
+// }
 
-export default Answer;
+// export default Answer;
