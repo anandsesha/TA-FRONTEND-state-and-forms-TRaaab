@@ -20,10 +20,20 @@
                 alt=""
               />
             </div>
-            <button class="more-info">More Info</button>
+            <button class="more-info" onclick="showPopup()">More Info</button>
             <h2>Movie Title: Oppenhiemer</h2>
             <h3>Release Date: 7 Nov 2023</h3>
           </div>
+
+          <!-- Popup overlay -->
+          <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <button class="close-btn" onclick="hidePopup()">✖</button>
+              <h2>Popup Title</h2>
+              <p>This is the content of the popup.</p>
+            </div>
+          </div>
+
           <!-- Movie-2 -->
           <div class="movie">
             <div class="img-wrapper">
@@ -32,6 +42,8 @@
                 alt=""
               />
             </div>
+            <button class="more-info" onclick="showPopup()">More Info</button>
+
             <h2>Movie Title: Oppenhiemer</h2>
             <h3>Release Date: 7 Nov 2023</h3>
           </div>
@@ -138,5 +150,14 @@
     ></script>
     <!-- Babel script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+      function showPopup() {
+        document.getElementById('popup').style.display = 'flex';
+      }
+
+      function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
