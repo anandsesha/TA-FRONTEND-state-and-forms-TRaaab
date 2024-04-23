@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Custom Styles */
+body {
+  margin: 1rem;
+  background-color: beige;
+  font-family: monospace;
+}
+h1 {
+  font-size: 2rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.flex {
+  display: flex;
+}
+.jsb {
+  justify-content: space-around;
+}
+.aic {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.movie {
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+img {
+  border: 1px solid gold;
+  width: 18rem;
+  height: 15rem;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+h2 {
+  font-size: 1.2rem;
+  color: black;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 200;
+  color: grey;
+}
+.more-info {
+  position: absolute; /* required to position it over the image */
+  bottom: 10px; /* start off-screen */
+  left: 50%;
+  transform: translate(-50%, -150%);
+  background-color: #333;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+  opacity: 0; /* start hidden */
+  transition: all 0.3s ease-in-out; /* smooth transition */
+}
+
+/* Hover effect for the 'More Info' button */
+.movie:hover .more-info {
+  bottom: 10px; /* bring the button into view */
+  opacity: 1; /* make it visible */
+}
+
+/* Popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to appear above other elements */
+}
+
+.popup-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

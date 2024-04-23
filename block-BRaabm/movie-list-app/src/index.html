@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie List App</title>
+  </head>
+  <body>
+    <div class="root">
+      <center>
+        <h1>Conditional rendering - Movie List App</h1>
+
+        <div class="container flex jsb aic flex-wrap">
+          <!-- Movie-1 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <button class="more-info" onclick="showPopup()">More Info</button>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+
+          <!-- Popup overlay -->
+          <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <button class="close-btn" onclick="hidePopup()">✖</button>
+              <h2>Popup Title</h2>
+              <p>This is the content of the popup.</p>
+            </div>
+          </div>
+
+          <!-- Movie-2 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <button class="more-info" onclick="showPopup()">More Info</button>
+
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-3 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+          <!-- Movie-4 -->
+          <div class="movie">
+            <div class="img-wrapper">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/M/MV5BNzM2MDk3MTcyMV5BMl5BanBnXkFtZTcwNjg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg"
+                ,
+                alt=""
+              />
+            </div>
+            <h2>Movie Title: Oppenhiemer</h2>
+            <h3>Release Date: 7 Nov 2023</h3>
+          </div>
+        </div>
+      </center>
+    </div>
+    <!-- React and ReactDOM CDN scripts -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Babel script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+      function showPopup() {
+        document.getElementById('popup').style.display = 'flex';
+      }
+
+      function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
