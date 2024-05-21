@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../src/App.css';
+import Form from './Form';
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -70,6 +71,8 @@ class App extends React.Component {
           <label htmlFor="">Textarea</label>
           <textarea name="textarea" id="" rows="8" cols="8" disabled></textarea>
         </form>
+
+        <Form />
       </center>
     );
   }
