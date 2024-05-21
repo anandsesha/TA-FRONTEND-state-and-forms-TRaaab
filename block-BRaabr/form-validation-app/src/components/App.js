@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../../src/App.css';
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -7,12 +7,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       text: '',
+      date: Date.now,
+      textarea: '',
     };
+    this.fileInput = React.createRef(); // uncontrolled component for input type='file'
   }
   handleInput = ({ target }) => {
     console.log(target); //the targeted element - text,date etc.
     let { name, value } = target;
-    console.log(name, value);
+    // console.log(name, value);
 
     this.setState({ [name]: value });
   };
@@ -31,10 +34,16 @@ class App extends React.Component {
           />
           {/* <!-- Date --> */}
           <label htmlFor="">Date Input</label>
-          <input type="date" name="date" id="" />
+          <input
+            type="date"
+            name="date"
+            id=""
+            value={this.state.date}
+            onChange={this.handleInput}
+          />
           {/* <!-- File --> */}
           <label htmlFor="">File Input</label>
-          <input type="file" name="file" id="" />
+          <input type="file" name="file" id="" ref={this.fileInput} />
           {/* <!-- Read Only --> */}
           <label htmlFor="">Read-Only Input</label>
           <input
@@ -49,7 +58,14 @@ class App extends React.Component {
           <input type="text" name="file" id="" disabled />
           {/* <!-- Textarea --> */}
           <label htmlFor="">Textarea</label>
-          <textarea name="textarea" id="" rows="8" cols="8"></textarea>
+          <textarea
+            name="textarea"
+            id=""
+            rows="8"
+            cols="8"
+            value={this.state.textarea}
+            onChange={this.handleInput}
+          ></textarea>
           {/* <!-- Textarea Disabled--> */}
           <label htmlFor="">Textarea</label>
           <textarea name="textarea" id="" rows="8" cols="8" disabled></textarea>
