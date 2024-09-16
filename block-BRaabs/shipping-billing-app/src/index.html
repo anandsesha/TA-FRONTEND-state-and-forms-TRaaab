@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Shipping Billing</title>
+  </head>
+  <body>
+    <div id="root">
+        <center>
+            <h1>Controlled Component - using state</h1>
+            <div class="container flex">
+                <div class="box shipping">
+                    <h2>Shipping Address</h1>
+                    <form action="">
+                        <!-- Address -->
+                        <label for="address">Address</label>
+                        <input type="text" name="address">
+                        <!-- Zip -->
+                        <label for="zip">Zip/Postal Code</label>
+                        <input type="number" name="zip">
+                        <!-- City -->
+                        <label for="city">City</label>
+                        <input type="text" name="city">
+                        <!-- Country -->
+                        <label for="country">Country</label>
+                        <input type="text" name="country">
+                    </form>   
+                </div>
+                <div class="box billling">
+                    <h2>Billing Address</h1>
+                        <form action="">
+                            <div class="checkbox-container">
+                                <input type="checkbox"> 
+                                <label for="">Same as Shipping Address?</label>
+                            </div>
+                            <!-- Address -->
+                            <label for="address">Address</label>
+                            <input type="text" name="address">
+                            <!-- Zip -->
+                            <label for="zip">Zip/Postal Code</label>
+                            <input type="number" name="zip">
+                            <!-- City -->
+                            <label for="city">City</label>
+                            <input type="text" name="city">
+                            <!-- Country -->
+                            <label for="country">Country</label>
+                            <input type="text" name="country">
+                        </form>
+                </div>
+            </div>
+        </center>
+    </div>
+  </body>
+</html>
